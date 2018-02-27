@@ -1,7 +1,7 @@
 ;when - its only macros which use "if"
 (if (< 5 10) "true" "false")
 
-;when помещает код в оператор do (вернет только последн. значение)
+;when помещает код в оператор do (вернет только последн. значение если логич  true) 
 (when (< 1 10) (println "test") 1)
 
 ;возвращается только последний результат
@@ -20,6 +20,7 @@
 
 ;bindings only after when
 (when-let [a (str "ok" "go")] (println a) (str "test" a))
+(when-let [a (> 1 5)] "ok")
 
 ;conditions
 (cond  
