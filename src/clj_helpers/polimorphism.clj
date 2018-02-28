@@ -13,4 +13,4 @@
 (test-John-Doe "John")
 
 
- 
+;add destruct in fnc params 

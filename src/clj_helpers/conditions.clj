@@ -2,7 +2,7 @@
 (if (< 5 10) "true" "false")
 
 ;when помещает код в оператор do (вернет только последн. значение если логич  true) 
-(when (< 1 10) (println "test") 1)
+(when (< 11 10) (println "test") 1 5)
 
 ;возвращается только последний результат
 (do () () ())
@@ -34,4 +34,8 @@
     2 2 
     "ok" "ok"
     "default")
-    
+
+
+(defn testing [value]
+  (cond (contains? value price) {:a1 :b2}))
+  

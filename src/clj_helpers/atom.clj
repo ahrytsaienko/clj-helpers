@@ -16,7 +16,6 @@
 ;Сравнение и изменение значения. Если compare=false тогда значение не поменяется
 (compare-and-set! state 5 10)
 
-
 ;Watcher следит за состоянием атома
 (add-watch state :key (fn [key ato old-value new-value] (println ato old-value new-value)))
 (swap! state inc)
