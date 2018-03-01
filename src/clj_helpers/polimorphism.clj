@@ -12,5 +12,19 @@
 
 (test-John-Doe "John")
 
+;example default value
+(defn get-user
+ ([name second-name]
+  (get-user name second-name nil))
+
+ ([name second-name {:keys [age] :or {age 25}}]
+
+  [name second-name age]))
+
+(get-user "John" "Doe" {:age 30})
+(get-user "John" "Doe")
+ 
+
+ 
 
 ;add destruct in fnc params 
