@@ -25,6 +25,6 @@
 (get-user "John" "Doe")
  
 
- 
+;add doseq 
 
 ;add destruct in fnc params 
