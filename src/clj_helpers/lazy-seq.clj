@@ -35,16 +35,6 @@
 
 (time (second mapped-details))
 
-;into will return from lazy seq - data structure 
-(into {} (map identity {:a 1 :b 2}))
-
-;map iz seq function {:a 1 :b 2} => ([:a 1] [:b 2])
-(map identity {:a 1 :b 2})
-
-;not nesessary to give data structure to "into".
-(into [1 2 3] [4 5 6])
-
-
 
 
 
