@@ -27,3 +27,22 @@
 
 
 
+(defn connect
+  [board max-pos pos neighbor destination]
+  (if (<= destination max-pos)
+    (reduce (fn [new-board [p1 p2]]
+              (assoc-in new-board [p1 :connections p2] neighbor))
+      board
+      [[pos destination] [destination pos] [pos destination]])
+    board))
+
+(connect {} 15 1 2 4)
+
+;sample reduce with several functions works as recursion
+(defn testing
+  [text]
+  (reduce (fn [text text-fn] (text-fn text))
+    text
+    [clojure.string/trim #(clojure.string/replace  % #"lol" "LOL")]))
+
+(testing " lolhahalol ")

@@ -12,3 +12,4 @@
 ;seq map treats it like list of vectors
 (seq {:a 1 :b 2})
 
+
